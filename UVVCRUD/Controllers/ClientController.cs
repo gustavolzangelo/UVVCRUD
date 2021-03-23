@@ -21,5 +21,9 @@ namespace UVVCRUD.Controllers
             IEnumerable<Client> objList = _db.Clients;
             return View(objList);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
