@@ -1,0 +1,66 @@
+﻿@model IEnumerable<UVVCRUD.Models.Client>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Clients</h2>
+        </div>
+        <div class="col-6">
+            Create new client
+        </div>
+    </div>
+    <br />
+
+    @if(Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Registration
+                    </th>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Birth Date
+                    </th>
+                    <th>
+                        CPF
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Job
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model) 
+                {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Surename</td>
+                    <td>@item.Email</td>
+                    <td>@item.BirthDate</td>
+                    <td>@item.CPF</td>
+                    <td>@item.Age</td>
+                    <td>@item.Job</td>                    
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No items created yet</p>
+    }
+</div>
