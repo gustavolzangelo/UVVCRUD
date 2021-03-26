@@ -1,0 +1,77 @@
+﻿@model UVVCRUD.Models.Client
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<article class="card-body mx-auto" style="max-width: 400px;">    
+    <form method="post" asp-action="DeletePost">
+        <input asp-for="Id" hidden />
+        <div class="border p-3">
+            <div class="form-group row">
+                <h2 class="text-black-50 pl-3">Delete Client</h2>
+            </div>
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+            </div>
+            <input disabled asp-for="Name" class="form-control" placeholder="First name" type="text" />
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+            </div>
+            <input disabled asp-for="Surename" class="form-control" placeholder="Surename" type="text" />
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fas fa-envelope"></i> </span>
+            </div>
+            <input disabled asp-for="Email" class="form-control" placeholder="Email" type="text" />                       
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fas fa-birthday-cake"></i> </span>
+            </div>
+            <input disabled asp-for="BirthDate" class="form-control" placeholder="Birthday" type="date" />
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="far fa-id-card"></i> </span>
+            </div>
+            <input disabled asp-for="CPF" class="form-control" placeholder="CPF" type="text" />                        
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="far fa-calendar-alt"></i> </span>
+            </div>
+            <input disabled asp-for="Age" class="form-control" placeholder="Age" type="text" />
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fas fa-user-md"></i> </span>
+            </div>
+            <input disabled asp-for="Job" class="form-control" placeholder="Job" type="text" />
+        </div>
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i> </span>
+            </div>
+            <input disabled asp-for="Password" class="form-control" placeholder="Passoword" type="password" />
+            <br />            
+        </div>
+        <div class="form-group row">
+            <div class="col-8 offset-2 row">
+                <div class="col">
+                    <input type="submit" class="btn btn-danger" value="Delete" />
+                </div>
+                <div class="col">
+                    <a asp-action="Index" class="btn btn-success">Back</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</article>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+}
+}
